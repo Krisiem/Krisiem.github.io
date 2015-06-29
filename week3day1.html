@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+
+</head><body>
+  <div id="everything">
+      <h1>A heading!</h1>
+      <p>Here's some text!</p>
+      <p>Here's a second set of text!</p>
+      <div class="holder">
+          <ul>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+          </ul>
+      </div>
+      <div class="holder">
+          <ul>
+              <li id="changeMe">List Item 4</li>
+              <li>List Item 5</li>
+              <li>List Item 6</li>
+          </ul>
+      </div>
+      <li>This should not be bold</li>
+      <div id="secret">We should hide this!</div>
+  </div>
+  <script>
+  $("body").css({"background-color":"orange"}); 
+    $("h1").css({"color":"pink"});
+    $("#everything").css({"font-size":"110%"});
+    $("ul li").css({"font-weight":"bold"});
+    $("h1 + p").css({"color":"green"});
+    $("#secret").css({"display":"none"});
+    $("#changeMe").html("not number 4");
+    $("#changeMe").append("This is fun");
+    $("li").html("This is my list");
+    $("li").append("This is a lot");
+    $("#secret").css({"display":"block"});
+    $("#secret").html("Oh Ok I get it");
+    $("#everything").append("<p> This is a new p </p>");
+  </script>
+</body>
+</html>
