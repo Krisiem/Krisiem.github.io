@@ -1,0 +1,9 @@
+h3#Activity{
+    background-color:pink; border: 200px; color: yellow;
+}
+h3#StartTime{
+    background-color:plum; border:200px; color: orange;
+}
+h4#EndTime{
+    background-color:red; border:200px; color: blue;
+}

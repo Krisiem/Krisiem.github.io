@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="https://rawgit.com/jonthornton/jquery-timepicker/master/jquery.timepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+       <link rel="stylesheet" href="https://rawgit.com/jonthornton/jquery-timepicker/master/jquery.timepicker.css">
+        <script src="tracker.js"></script>
+        <script id="activity-template" type="text/x-handlebars-template">
+            <div class="activity">
+                <h3 id="Activity">{{activity}}</h3>
+            </div>
+            <div class="start time">
+                <h3 id="StartTime">Start Time: {{start}}</h3>
+                </div>
+            <div class="end time">
+                <h4 id="EndTime">End Time: {{end}}</h4>
+                <hr>
+                </div>
+        </script>
+        <link rel="stylesheet" href="tracker.css">
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend> Track Your Time </legend>
+                <div>
+                    <input type="text" placeholder="Start Time" name="start">
+                </div> 
+                <div>
+                    <input type="text" placeholder="End Time" name="end">
+                </div>
+                <div>
+                    <input type="text" placeholder="Activity Name" name="activity">
+                </div>
+                <div>
+                    <input type="submit" value="Submit!">
+                </div>
+            </fieldset>
+        </form>
+        <h2> All Activity!</h2>
+        <div id="activities"></div>
+    </body>
+    
+    
+    
+    
+</html>

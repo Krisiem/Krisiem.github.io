@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    </head>
+    <body>
+        <h3>Current Temp: <span id= "currentTemp"></span> </h3>
+        <h3>Today's High: <span id= "todaysHigh"></span></h3> 
+        <h3>Today's Low <span id= "todaysLow"></span></h3>
+        <h3>Today's Humidity <span id= "todaysHumidity"></span></h3>
+        <h3>Today's Speed <span id= "todayspeed"></span></h3>
+        <script>
+        $.get("http://api.openweathermap.org/data/2.5/weather?q=New%20Orleans&mode=json&units=imperial ", function(data){
+           console.log(data); 
+           $("#currentTemp").text(data.main.temp);
+           $("#todaysHigh").text(data.main.temp_max);
+           $("#todaysLow").text(data.main.temp_min);
+           $("#todaysHumidity").text(data.main.humidity);
+           $("body").css({"background-color":"Pink"});
+           $("#todaysHigh").css({"color":"red"});
+           $("#todayspeed").text(data.wind.speed);
+           $("#todaysHumidity").css({"color":"yellow"});
+           $("#todaysLow").css({"color":"plum"});
+           $("#currentTemp").css({"color":"orange"});
+           $("#todayspeed").css({"color":"green"});
+        });
+        </script>
+        
+    </body>
+    
+    
+    
+    
+</html>

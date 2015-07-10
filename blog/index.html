@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+        <link rel="stylesheet" href="blog.css">
+        <script src="blog.js"></script>
+        <script id="post-template" type="text/x-handlebars-template">
+        <div class="title">
+                <h3 id="title">{{title}}</h3>
+            </div>
+            <div class="body">
+                <h3 id="body">{{body}}</h3>
+                </div>
+                <hr>
+        </script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>New Post!</legend>
+                <div>
+                    <input id= "WhatYouWant" type="text" placeholder="title" name="title">
+                </div>
+                <div>
+                    <textarea id="HowIFeel" name="body">Write How You Feeling?</textarea>
+                </div>
+                <div>
+                    <input id="one" type="submit" value="Submit!">
+                </div>
+            </fieldset>
+        </form>
+        <div id ="NewPost"></div>
+    </body>
+</html>
